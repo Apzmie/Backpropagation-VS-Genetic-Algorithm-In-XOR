@@ -20,12 +20,13 @@ Chain rule must be applied.
 Random values are set for visualization.
 <img src="https://github.com/user-attachments/assets/d24f8f56-1254-4fdc-8c24-c0fd0b655d77" width="800">
 
-- Each organism has only one gene (list) that contains several nucleotides (weights).
-- Parents share their genes to make new gene with mutation (±).
-- We want the best offspring with the best gene to solve the XOR problem.
+- Each organism (list) has several genes (values).
+- Parents share their genes to make new offsprings with new genes, having mutation (±).
+- We want the best offspring with the best genes to solve the XOR problem.
 - Each value becomes a weight of the neural network.
 
 # run_backpropagation.py
+It is better to set num_hidden_nodes to 4 for comparison with the genetic algorithm because its hidden nodes are set to 4. You can set it to other values for experimentation. The architecture is linear(2, 4) -> linear(4, 1) that the number of hidden layers is fixed. The reason that the number of hidden layers is fixed is that the architecutre of the genetic algorithm needs modification if the number of hidden layers changes.
 ```python
 from backpropagation import XORModel_Backpropagation
 import numpy as np
@@ -47,6 +48,7 @@ Epoch 50000, Loss: 0.000409
 ```
 
 # run_genetic_algorithm.py
+num_genes should be set to 17 because the architecture (Linear(2, 4) -> Linear(4, 1)) needs 17 values (weight 8 + bias 4 + weight 4 + bias 1). num_organisms is the number of organisms at the beginning and num_offsprings is the number of offsprings from parents over time.
 ```python
 from genetic_algorithm import XORModel_GeneticAlgorithm
 import numpy as np
