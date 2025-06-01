@@ -1,2 +1,2 @@
 # Backpropagation-VS-Genetic-Algorithm-In-XOR
-Comparison between gradient-based and gradient-free methods from scratch
+Backpropagation has become the fundamental learning algorithm for neural networks. This project compares the performance between gradient-based backpropagation and gradient-free genetic algorithm in solving the XOR problem. They are implemented from scratch using NumPy, and the backpropagation algorithm is based on the paper [Learning representations by back-propagating errors](https://www.iro.umontreal.ca/~vincentp/ift3395/lectures/backprop_old.pdf).
