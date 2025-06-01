@@ -8,6 +8,15 @@ You only need run_backpropagation.py and run_genetic_algorithm.py to get started
 - run_backpropagation - XOR data and start of training by backpropagation
 - run_genetic_algorithm - XOR data and start of training by genetic algorithm
 
+# Genetic Algorithm
+Random values are set for visualization.
+<img src="https://github.com/user-attachments/assets/d24f8f56-1254-4fdc-8c24-c0fd0b655d77" width="800">
+
+- Each organism has only one gene (list) that contains several nucleotides (weights).
+- We want the best organism who has the best gene to solve the XOR problem.
+- Each value becomes weights of the neural network 
+
+
 # run_backpropagation.py
 ```python
 from backpropagation import XORModel_Backpropagation
