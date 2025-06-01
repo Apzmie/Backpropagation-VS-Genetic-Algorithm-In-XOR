@@ -26,7 +26,7 @@ Random values are set for visualization.
 - Each value becomes a weight of the neural network.
 
 # run_backpropagation.py
-It is better to set num_hidden_nodes to 4 for comparison with the genetic algorithm because its hidden nodes are set to 4. You can set it to other values for experimentation. The architecture is linear(2, 4) -> linear(4, 1) that the number of hidden layers is fixed. The reason that the number of hidden layers is fixed is that the architecutre of the genetic algorithm needs modification if the number of hidden layers changes.
+It is better to set num_hidden_nodes to 4 for comparison with the genetic algorithm because its hidden nodes are set to 4. The architecture is linear(2, 4) -> linear(4, 1) that the number of hidden layers is fixed. The reason that the number of hidden layers is fixed is that the architecutre of the genetic algorithm needs modification if the number of hidden layers changes.
 ```python
 from backpropagation import XORModel_Backpropagation
 import numpy as np
