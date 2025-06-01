@@ -4,7 +4,7 @@ Backpropagation has become the fundamental learning algorithm for neural network
 # Overview
 You only need run_backpropagation.py and run_genetic_algorithm.py to get started after download all .py files and required libraries.
 - backpropagation.py - chain rule to calculate partial derivatives for updating weights
-- genetic_algorithm.py - genetic imitation that a list of weights is represented as one gene, evloving toward the best gene over time
+- genetic_algorithm.py - genetic imitation that a list of weights is represented as one gene, getting the gene of the best offspring
 - run_backpropagation - XOR data and start of training by backpropagation
 - run_genetic_algorithm - XOR data and start of training by genetic algorithm
 
