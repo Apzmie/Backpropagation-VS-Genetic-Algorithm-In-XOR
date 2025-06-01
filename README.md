@@ -8,6 +8,14 @@ You only need run_backpropagation.py and run_genetic_algorithm.py to get started
 - run_backpropagation - XOR data and start of training by backpropagation
 - run_genetic_algorithm - XOR data and start of training by genetic algorithm
 
+# Backpropagation
+Chain rule must be applied.
+
+<img src="https://github.com/user-attachments/assets/d4ef2d70-a51e-4937-b429-80dff05ef741" width="400">
+
+- We need to calculate ∂E/∂W1 to understand how weights affect the error function.
+- Although weights do not exist in the error function, simplifying fractions gives us the answer.
+
 # Genetic Algorithm
 Random values are set for visualization.
 <img src="https://github.com/user-attachments/assets/d24f8f56-1254-4fdc-8c24-c0fd0b655d77" width="800">
