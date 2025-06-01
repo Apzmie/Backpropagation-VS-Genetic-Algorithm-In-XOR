@@ -13,7 +13,7 @@ class XORModel_GeneticAlgorithm:
         self.ytrue = ytrue
         self.all_organisms = [np.random.randn(num_genes) for _ in range(num_organisms)]
 
-    def compute_loss(self, organism):       # Numbers should be modified if you want to change num_genes
+    def compute_loss(self, organism):       # Numbers should be modified if you change num_genes
         w1 = organism[:8].reshape(2, 4)
         b1 = organism[8:12]
         w2 = organism[12:16].reshape(4, 1)
@@ -60,7 +60,7 @@ class XORModel_GeneticAlgorithm:
 
         return best_organism, best_loss
 
-    def predict(self, X, organism):       # Numbers should be modified if you want to change num_genes
+    def predict(self, X, organism):       # Numbers should be modified if you change num_genes
         w1 = organism[:8].reshape(2, 4)
         b1 = organism[8:12]
         w2 = organism[12:16].reshape(4, 1)
