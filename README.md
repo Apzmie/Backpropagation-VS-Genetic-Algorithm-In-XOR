@@ -3,6 +3,6 @@ Backpropagation has become the fundamental learning algorithm for neural network
 
 # Overview
 - backpropagation.py - chain rule to calculate partial derivatives for updating weights
-- genetic_algorithm.py - 
+- genetic_algorithm.py - genetic imitation that a list of weights is represented as one gene, evloving toward the best gene over time.
 - run_backpropagation - XOR data and start of training by backpropagation
 - run_genetic_algorithm - XOR data and start of training by genetic algorithm
