@@ -3,6 +3,7 @@ import numpy as np
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
+
 class XORModel_GeneticAlgorithm:
     def __init__(self, num_organisms, num_genes, num_offsprings, X, ytrue):
         self.num_organisms = num_organisms
