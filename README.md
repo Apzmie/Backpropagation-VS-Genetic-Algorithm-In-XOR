@@ -71,9 +71,18 @@ Generation 200, Loss: 0.000003
 ```
 
 # Comparison
-There are some common points between two methods.
+Common points
 - If the number of hidden nodes is set to 2 rather than 4, both stabilities are not good that the results are inconsistent when performed multiple times.
-- If the number of hidden nodes is set to a large number such as 400, results of the backpropagation are inconsistent that can be thought to the same in the genetic algorithm as well.
 - If the number of hidden nodes is set to 4, both stabilities are good that the results are consistent.
 
-Performance of the genetic algorithm is better than the backpropagation that loss decreases quickly with fewer generations and increasing num_offsprings makes decreasing loss faster. Maybe t
+Difference
+- Performance of the genetic algorithm is better that loss decreases quickly with fewer generations and increasing num_offsprings makes decreasing loss faster. 
+- Complexity of implementing backpropagation is simpler and much simpler if auto-grad system will be applied, whereas implementing genetic algorithms is more complex.
+
+My opinion
+- If the number of hidden nodes is set to a large number such as 400, results of the backpropagation are inconsistent that can be thought to the same in the genetic algorithm as well.
+- The genetic algorithm is better in XOR because it may not be getting stuck in local minima.
+- Backpropagation will be better at more complex tasks because it adjust weights gradually through error correction, which enables to learn intricate patterens.
+
+# Conclusion
+Although the genetic algorithm performs better in XOR, backpropagation is more effective when considering all factors.
