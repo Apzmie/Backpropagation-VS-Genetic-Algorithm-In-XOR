@@ -70,10 +70,10 @@ Generation 200, Loss: 0.000003
  [0.00144575]]
 ```
 
-# Conclusion
+# Comparison
 There are some common points between two methods.
 - If the number of hidden nodes is set to 2 rather than 4, both stabilities are not good that the results are inconsistent when performed multiple times.
 - If the number of hidden nodes is set to a large number such as 400, results of the backpropagation are inconsistent that can be thought to the same in the genetic algorithm as well.
 - If the number of hidden nodes is set to 4, both stabilities are good that the results are consistent.
 
-Despite thses common points, 
+Performance of the genetic algorithm is better than the backpropagation that loss decreases quickly with fewer generations and increasing num_offsprings makes decreasing loss faster. Maybe t
