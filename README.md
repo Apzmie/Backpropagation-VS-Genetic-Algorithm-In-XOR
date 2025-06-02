@@ -26,7 +26,7 @@ Random values are set for visualization.
 - Each value becomes a weight of the neural network.
 
 # run_backpropagation.py
-It is better to set num_hidden_nodes to 4 for comparison because the numder of hidden layers and hidden nodes in the genetic algorithm is fixed, and codes should be modified if you want to change.
+It is better to set num_hidden_nodes to 4 for comparison because the number of hidden layers and hidden nodes in the genetic algorithm is fixed.
 ```python
 from backpropagation import XORModel_Backpropagation
 import numpy as np
@@ -48,7 +48,7 @@ Epoch 50000, Loss: 0.000409
 ```
 
 # run_genetic_algorithm.py
-num_genes should be set to 17 because Linear(2, 4) -> Linear(4, 1) needs 17 values (weight 8 + bias 4 + weight 4 + bias 1). num_organisms is the number of organisms at the beginning and num_offsprings is the number of offsprings from parents over time.
+num_genes should be set to 17 because Linear(2, 4) -> Linear(4, 1) requires 17 values (8 weight1 + 4 bias1  + 4 weight2 + 1 bias2). num_organisms is the number of organisms at the beginning and num_offsprings is the number of offsprings from parents over time.
 ```python
 from genetic_algorithm import XORModel_GeneticAlgorithm
 import numpy as np
@@ -77,7 +77,7 @@ Common points
 
 Difference
 - Performance of the genetic algorithm shows better that loss decreases quickly with fewer generations and increasing num_offsprings makes loss decrease even faster. 
-- Complexity of implementing backpropagation is simpler and much simpler if auto-grad system will be applied, whereas implementing genetic algorithms is more complex.
+- Implementing backpropagation is simpler and much simpler if auto-grad system will be applied, whereas implementing the genetic algorithm is more complex.
 
 My opinion
 - If the number of hidden nodes is set to a large number such as 400, results of the backpropagation become inconsistent that can be considered to the same in the genetic algorithm.
