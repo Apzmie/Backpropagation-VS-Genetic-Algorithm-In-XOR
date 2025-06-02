@@ -4,7 +4,7 @@ Backpropagation has become the fundamental learning algorithm for neural network
 # Overview
 You only need run_backpropagation.py and run_genetic_algorithm.py to get started after download all .py files and required libraries.
 - backpropagation.py - chain rule to calculate partial derivatives for updating weights
-- genetic_algorithm.py - genetic imitation that a list of weights is represented as one gene, getting the gene of the best offspring
+- genetic_algorithm.py - genetic imitation that weights are represented as genes, and a list of weights is represented as a single organism.
 - run_backpropagation - XOR data and start of training by backpropagation
 - run_genetic_algorithm - XOR data and start of training by genetic algorithm
 
@@ -21,12 +21,12 @@ Random values are set for visualization.
 <img src="https://github.com/user-attachments/assets/d24f8f56-1254-4fdc-8c24-c0fd0b655d77" width="800">
 
 - Each organism (list) has several genes (values).
-- Parents share their genes to make new offsprings with new genes, having mutation (±).
+- Parents share their genes to make new offsprings with mutation (±).
 - We want the best offspring with the best genes to solve the XOR problem.
 - Each value becomes a weight of the neural network.
 
 # run_backpropagation.py
-It is better to set num_hidden_nodes to 4 for comparison with the genetic algorithm because its hidden nodes are set to 4. The architecture is linear(2, 4) -> linear(4, 1) that the number of hidden layers is fixed. The reason that the number of hidden layers is fixed is that the architecutre of the genetic algorithm needs modification if the number of hidden layers changes.
+It is better to set num_hidden_nodes to 4 for comparison because the numder of hidden layers and hidden nodes in the genetic algorithm is fixed, and codes should be modified if you want to change.
 ```python
 from backpropagation import XORModel_Backpropagation
 import numpy as np
@@ -48,7 +48,7 @@ Epoch 50000, Loss: 0.000409
 ```
 
 # run_genetic_algorithm.py
-num_genes should be set to 17 because the architecture (Linear(2, 4) -> Linear(4, 1)) needs 17 values (weight 8 + bias 4 + weight 4 + bias 1). num_organisms is the number of organisms at the beginning and num_offsprings is the number of offsprings from parents over time.
+num_genes should be set to 17 because Linear(2, 4) -> Linear(4, 1) needs 17 values (weight 8 + bias 4 + weight 4 + bias 1). num_organisms is the number of organisms at the beginning and num_offsprings is the number of offsprings from parents over time.
 ```python
 from genetic_algorithm import XORModel_GeneticAlgorithm
 import numpy as np
@@ -72,15 +72,15 @@ Generation 200, Loss: 0.000003
 
 # Comparison
 Common points
-- If the number of hidden nodes is set to 2 rather than 4, both stabilities are not good that the results are inconsistent when performed multiple times.
-- If the number of hidden nodes is set to 4, both stabilities are good that the results are consistent.
+- If the number of hidden nodes is set to 2 rather than 4, results are inconsistent when performed multiple times.
+- If the number of hidden nodes is set to 4, results are consistent and performances get better.
 
 Difference
-- Performance of the genetic algorithm is better that loss decreases quickly with fewer generations and increasing num_offsprings makes decreasing loss faster. 
+- Performance of the genetic algorithm shows better that loss decreases quickly with fewer generations and increasing num_offsprings makes loss decrease even faster. 
 - Complexity of implementing backpropagation is simpler and much simpler if auto-grad system will be applied, whereas implementing genetic algorithms is more complex.
 
 My opinion
-- If the number of hidden nodes is set to a large number such as 400, results of the backpropagation are inconsistent that can be thought to the same in the genetic algorithm as well.
+- If the number of hidden nodes is set to a large number such as 400, results of the backpropagation become inconsistent that can be considered to the same in the genetic algorithm.
 - The genetic algorithm is better in XOR because it may not be getting stuck in local minima.
 - Backpropagation will be better at more complex tasks because it adjust weights gradually through error correction, which enables to learn intricate patterens.
 
